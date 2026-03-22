@@ -46,7 +46,7 @@ export default function Navbar() {
           className="font-display text-xl font-semibold"
           style={{ color: "var(--accent-pink)" }}
         >
-          YN<span style={{ color: "var(--text-primary)" }}>.</span>
+          HJ<span style={{ color: "var(--text-primary)" }}></span>
         </a>
 
         {/* Desktop Links */}

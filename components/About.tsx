@@ -24,32 +24,56 @@ export default function About() {
             >
               About Me
             </p>
+
             <h2
               className="font-display text-4xl font-bold mb-5"
               style={{ color: "var(--text-primary)" }}
             >
               Crafting ideas into <br />
-              <span style={{ color: "var(--accent-blue)" }}>digital reality</span>
+              <span style={{ color: "var(--accent-blue)" }}>
+                digital reality
+              </span>
             </h2>
-            <p className="text-base leading-relaxed mb-4" style={{ color: "var(--text-secondary)" }}>
-              I'm a passionate developer based in [Your City], focused on building
-              web applications that are fast, accessible, and delightful to use.
-              I care deeply about clean code, good design, and the tiny details
-              that make an experience feel polished.
+
+            <p
+              className="text-base leading-relaxed mb-4"
+              style={{ color: "var(--text-secondary)" }}
+            >
+              I'm Harintha Jayashivani, a Software Engineering undergraduate
+              based in Sri Lanka, with a strong passion for building modern,
+              user-friendly web applications. I enjoy turning ideas into
+              functional and visually appealing digital experiences that solve
+              real-world problems.
             </p>
-            <p className="text-base leading-relaxed" style={{ color: "var(--text-secondary)" }}>
-              When I'm not coding, you'll find me exploring new design trends,
-              jamming on guitar, or reading about technology and philosophy.
+
+            <p
+              className="text-base leading-relaxed mb-4"
+              style={{ color: "var(--text-secondary)" }}
+            >
+              Currently, I'm expanding my skills in full-stack development while
+              working on projects like BillVault — a smart expense and warranty
+              tracking mobile app. I focus on writing clean, efficient code and
+              designing interfaces that are both intuitive and engaging.
+            </p>
+
+            <p
+              className="text-base leading-relaxed"
+              style={{ color: "var(--text-secondary)" }}
+            >
+              Beyond coding, I’ve taken on leadership roles as a senior prefect,
+              Interact Club treasurer, and an active member of my school’s
+              netball team. I also love playing the guitar and exploring new
+              trends in technology, design, and innovation.
             </p>
           </div>
 
           {/* Stats cards */}
           <div className="grid grid-cols-2 gap-4">
             {[
-              { number: "2+",  label: "Years of Experience" },
-              { number: "15+", label: "Projects Completed"  },
-              { number: "10+", label: "Technologies Used"   },
-              { number: "∞",   label: "Cups of Coffee"      },
+              { number: "1+", label: "Years in Software Engineering" },
+              { number: "10+", label: "Projects Completed" },
+              { number: "8+", label: "Technologies Explored" },
+              { number: "∞", label: "Ideas & Creativity" },
             ].map((stat, i) => (
               <motion.div
                 key={i}
@@ -68,7 +92,10 @@ export default function About() {
                 >
                   {stat.number}
                 </p>
-                <p className="text-sm" style={{ color: "var(--text-secondary)" }}>
+                <p
+                  className="text-sm"
+                  style={{ color: "var(--text-secondary)" }}
+                >
                   {stat.label}
                 </p>
               </motion.div>

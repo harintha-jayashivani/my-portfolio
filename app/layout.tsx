@@ -3,10 +3,10 @@ import "./globals.css";
 import { ThemeProvider } from "@/context/ThemeContext";
 
 export const metadata: Metadata = {
-  title: "Your Name — Developer",
-  description: "Personal portfolio of [Your Name], a full-stack developer.",
+  title: "Harintha_J — Developer",
+  description: "Personal portfolio of Harintha Jayashivani , a Software Engineering Undergraduate.",
   openGraph: {
-    title: "Your Name — Developer",
+    title: "Harintha_J — Developer",
     description: "Check out my projects and skills.",
     type: "website",
   },

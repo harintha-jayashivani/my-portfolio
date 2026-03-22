@@ -107,7 +107,7 @@ export default function Contact() {
             className="md:col-span-2 flex flex-col gap-5"
           >
             {[
-              { icon: <IconMail size={18} />, label: "Email", value: "your@email.com", href: "mailto:your@email.com" },
+              { icon: <IconMail size={18} />, label: "Email", value: "h.jayashivani@gmail.com", href: "h.jayashivani@gmail.com" },
               { icon: <IconBrandGithub size={18} />, label: "GitHub", value: "github.com/you", href: "https://github.com/you" },
               { icon: <IconBrandLinkedin size={18} />, label: "LinkedIn", value: "linkedin.com/in/you", href: "https://linkedin.com/in/you" },
             ].map((item) => (

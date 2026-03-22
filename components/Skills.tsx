@@ -2,7 +2,22 @@
 
 import { motion } from "framer-motion";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { skills } from "@/data/portfolio";
+
+// Your personalized skills data
+const skills = [
+  { name: "HTML", level: 95, category: "frontend" },
+  { name: "CSS / Tailwind CSS", level: 90, category: "frontend" },
+  { name: "JavaScript / TypeScript", level: 92, category: "frontend" },
+  { name: "React", level: 90, category: "frontend" },
+  { name: "Next.js", level: 85, category: "frontend" },
+  { name: "Node.js", level: 85, category: "backend" },
+  { name: "Express.js", level: 80, category: "backend" },
+  { name: "MongoDB", level: 80, category: "backend" },
+  { name: "Firebase", level: 75, category: "backend" },
+  { name: "Git / GitHub", level: 90, category: "tools" },
+  { name: "VS Code", level: 95, category: "tools" },
+  { name: "Figma", level: 70, category: "tools" },
+];
 
 const categories = ["frontend", "backend", "tools"] as const;
 
@@ -10,13 +25,17 @@ export default function Skills() {
   const { ref, inView } = useScrollAnimation();
 
   return (
-    <section id="skills" className="py-28 px-6">
-      {/* Subtle section bg */}
+    <section id="skills" className="py-28 px-6 relative">
+      {/* Subtle background */}
       <div
         className="absolute inset-0 -z-10 opacity-30 pointer-events-none"
-        style={{ background: "radial-gradient(ellipse at center, var(--accent-blue) 0%, transparent 70%)" }}
+        style={{
+          background:
+            "radial-gradient(ellipse at center, var(--accent-blue) 0%, transparent 70%)",
+        }}
       />
       <div className="max-w-5xl mx-auto">
+        {/* Section Heading */}
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
@@ -24,15 +43,21 @@ export default function Skills() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-sm font-mono uppercase tracking-widest mb-3"
-            style={{ color: "var(--accent-pink)" }}>
+          <p
+            className="text-sm font-mono uppercase tracking-widest mb-3"
+            style={{ color: "var(--accent-pink)" }}
+          >
             Skills
           </p>
-          <h2 className="font-display text-4xl font-bold" style={{ color: "var(--text-primary)" }}>
+          <h2
+            className="font-display text-4xl font-bold"
+            style={{ color: "var(--text-primary)" }}
+          >
             What I work with
           </h2>
         </motion.div>
 
+        {/* Skills by category */}
         <div className="space-y-12">
           {categories.map((category, ci) => (
             <div key={category}>
@@ -50,7 +75,10 @@ export default function Skills() {
                       key={skill.name}
                       initial={{ opacity: 0, x: -20 }}
                       animate={inView ? { opacity: 1, x: 0 } : {}}
-                      transition={{ duration: 0.5, delay: ci * 0.15 + i * 0.08 }}
+                      transition={{
+                        duration: 0.5,
+                        delay: ci * 0.15 + i * 0.08,
+                      }}
                       className="rounded-xl p-4 border"
                       style={{
                         backgroundColor: "var(--bg-card)",
@@ -71,6 +99,7 @@ export default function Skills() {
                           {skill.level}%
                         </span>
                       </div>
+
                       {/* Progress bar */}
                       <div
                         className="h-1.5 rounded-full overflow-hidden"
@@ -79,10 +108,15 @@ export default function Skills() {
                         <motion.div
                           initial={{ width: 0 }}
                           animate={inView ? { width: `${skill.level}%` } : {}}
-                          transition={{ duration: 0.9, delay: ci * 0.15 + i * 0.08 + 0.2, ease: "easeOut" }}
+                          transition={{
+                            duration: 0.9,
+                            delay: ci * 0.15 + i * 0.08 + 0.2,
+                            ease: "easeOut",
+                          }}
                           className="h-full rounded-full"
                           style={{
-                            background: `linear-gradient(to right, var(--accent-pink), var(--accent-blue))`,
+                            background:
+                              "linear-gradient(to right, var(--accent-pink), var(--accent-blue))",
                           }}
                         />
                       </div>
